@@ -9,7 +9,7 @@ app.use(express.json())
 
 app.post("/health-checkup", function(req, res){
     //kidneys=[1,2,3,4]
-    const kidneys = res.body.kidneys;
+    const kidneys = req.body.kidneys;
     const response = schema.safeParse(kidneys)
     if(!response.success){
         res.status(411).json({
