@@ -3,7 +3,14 @@ const app = express()
 const zod = require("zod")
 const port = 3400
 
-const schema = zod.array(zod.number())
+//const schema = zod.array(zod.number())
+
+const schemaob = zod.object({
+    email:zod.string(),
+    password: zod.string().min(8),
+    country: zod.literal("IN").or(zod.literal("US")),
+    kidneys: zod.array(zod.number())
+})
 
 app.use(express.json())
 
