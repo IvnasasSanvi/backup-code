@@ -13,13 +13,15 @@
         // var secondno = document.getElementById("secondno").value;
         // var sum = parseFloat(firstno) + parseFloat(secondno);
         // document.getElementById("finalsum").innerHTML = "The sum is: " + sum;
-        alert("hello");
+        const element = document.getElementById("finalsum");
+        element.innerHTML = "hello world";
+
     }
 </script>   
 <body>
     <input type="text" id="firstno" placeholder="first number"><br><br>
     <input type="text" id="secondno" placeholder="second number"><br><br>
-    <button onclick="populateDiv()">Calculate</button>
+    <button onclick="populateDiv()">Calculate</button><br><br>
     <div id="finalsum"></div>
 </body> 
 </html>
