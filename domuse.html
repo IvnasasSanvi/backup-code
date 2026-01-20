@@ -9,12 +9,12 @@
 </head>
 <script>
     function populateDiv() {
-        // var firstno = document.getElementById("firstno").value;
-        // var secondno = document.getElementById("secondno").value;
+        var firstno = document.getElementById("firstno").value;
+        var secondno = document.getElementById("secondno").value;
         // var sum = parseFloat(firstno) + parseFloat(secondno);
         // document.getElementById("finalsum").innerHTML = "The sum is: " + sum;
         const element = document.getElementById("finalsum");
-        element.innerHTML = "hello world";
+        element.innerHTML = parseInt(firstno) + parseInt(secondno);
 
     }
 </script>   
