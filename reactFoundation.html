@@ -1,0 +1,40 @@
+<!-- React Foundation 
+ PPT: https://appx-recordings.s3.ap-south-1.amazonaws.com/drm/100x/slides/4.2.pdf
+
+Gists:
+https://gist.github.com/hkirat/e61655a7d93ce06810488be402adebee
+https://gist.github.com/hkirat/cb9d7e2f75617ac281427276e20a691c
+https://gist.github.com/hkirat/ed34df967f162d152e35537cb8215144
+https://gist.github.com/hkirat/186fb6652fb6a38908ebe3030d4c4542
+
+Links:
+https://sum-server.100xdevs.com/todos
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Foundation</title>
+    <style>
+    </style>
+</head>
+<script>
+    function addTodo() {
+        const title =  document.getElementById("title").value;
+        const description =  document.getElementById("description").value;
+        document.getElementById("container").innerHTML =`
+        <div>Title: ${title} <br></div>
+        <div>Description: ${description}</div>
+        `;
+    }
+</script>
+<body>
+    <!-- React Foundation  -->
+    <input type="text" id="title" placeholder="enter title"></input><br><br>
+    <input type="text" id="description" placeholder="enter description"></input><br><br>
+    <button onclick="addTodo()">Add Todo</button><br><br>
+    <div id="container"></div>
+</body> 
+</html>
