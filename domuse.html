@@ -1,3 +1,12 @@
+<!--
+DOM use how to connect with backend
+    Gists:
+https://gist.github.com/hkirat/1b494c8f2e1f08a9771f918569e5efbf
+Sum Server: https://sum-server.100xdevs.com/sum?a=8&b=5
+Sum Server Repo: https://github.com/hkirat/sum-server
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>  
@@ -13,8 +22,18 @@
         var secondno = document.getElementById("secondno").value;
         // var sum = parseFloat(firstno) + parseFloat(secondno);
         // document.getElementById("finalsum").innerHTML = "The sum is: " + sum;
-        const element = document.getElementById("finalsum");
-        element.innerHTML = parseInt(firstno) + parseInt(secondno);
+        //const element = document.getElementById("finalsum");
+        //fetch
+        fetch("https://sum-server.100xdevs.com/sum?a=" + firstno + "&b=" + secondno)
+        .then(function(response) {
+            console.log(response);
+
+            response.text().then(function(data) {
+                console.log(data);
+                document.getElementById("finalsum").innerHTML = "The sum is: " + data;
+            });
+        })
+        //element.innerHTML = parseInt(firstno) + parseInt(secondno);
 
     }
 </script>   
