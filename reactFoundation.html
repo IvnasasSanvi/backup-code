@@ -24,7 +24,8 @@ https://sum-server.100xdevs.com/todos
     function addTodo() {
         const title =  document.getElementById("title").value;
         const description =  document.getElementById("description").value;
-        document.getElementById("container").innerHTML =`
+        const originalHtml = document.getElementById("container").innerHTML;
+        document.getElementById("container").innerHTML = originalHtml + `
         <div>Title: ${title} <br></div>
         <div>Description: ${description}</div>
         `;
