@@ -17,6 +17,15 @@ Sum Server Repo: https://github.com/hkirat/sum-server
     </style>
 </head>
 <script>
+    /*
+    let timeout
+    function debounce(){
+    clearTimeout(timeout);
+    timeout = setTimeout(function(){
+        //code to run after user stops typing
+    }, 500);
+    }
+    */
     function populateDiv() {
         var firstno = document.getElementById("firstno").value;
         var secondno = document.getElementById("secondno").value;
@@ -51,7 +60,7 @@ Sum Server Repo: https://github.com/hkirat/sum-server
 <body>
     <input type="text" id="firstno" placeholder="first number"><br><br>
     <input type="text" id="secondno" placeholder="second number"><br><br>
-    <button onclick="populateDiv()">Calculate</button><br><br>
+    <button onclick="populateDiv2()">Calculate</button><br><br>
     <div id="finalsum"></div>
 </body> 
 </html>
