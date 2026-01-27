@@ -6,8 +6,18 @@ const App = () => {
   
   return (
     <div>
-      <button onClick={()=> setcount(count+1)}>count = {count}</button>
+      <CustomButton count = {count} setcount={setcount}></CustomButton>
     </div>
+  )
+}
+
+//component
+function CustomButton(props){
+  function onClickHandler(){
+    props.setcount(props.count + 1)
+  }
+  return(
+    <button onClick={onClickHandler}>count = {props.count}</button>
   )
 }
 
