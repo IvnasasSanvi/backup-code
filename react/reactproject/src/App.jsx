@@ -34,7 +34,11 @@ function App() {
 
   return (
     <div>
-      <Todo title="dfdfsgddf" description="huehdweg" ></Todo>
+      {/* <Todo title={todos[0].title} description={todos[0].description} completed={todos[0].completed}></Todo>
+      <Todo title={todos[1].title} description={todos[1].description} completed={todos[1].completed}></Todo> */}
+      {todos.map((todo, index) => (
+        <Todo key={index} title={todo.title} description={todo.description} completed={todo.completed}></Todo>
+      ))}
     </div>
   )
 }
