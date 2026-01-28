@@ -31,6 +31,22 @@ function App() {
     description: "workout at 10am",
     completed: true
   }])
+
+  return (
+    <div>
+      <Todo title="dfdfsgddf" description="huehdweg" ></Todo>
+    </div>
+  )
+}
+
+function Todo(props){
+  return(
+    <div>
+      <h3>{props.title}</h3>
+      <p>{props.description}</p>
+     
+    </div>
+  )
 }
 
 export default App
