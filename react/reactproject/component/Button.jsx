@@ -7,9 +7,19 @@ const Button = ({count, setname }) => {
         <div>
        
             <button onClick={()=>setname(count+1)}>count={count}</button>
-            
+            <Header title={title}> </Header>
+            <Header title="sanvi2"> </Header>
+            <Header title="sanvi3"> </Header>
+            <Header title="sanvi4"> </Header>
         </div>
     )
+}
+const [title, setTitle] = useState("My name is sanvi")
+function Header({title}){
+    console.log("rendered")
+    return <div>
+        {title}
+    </div>
 }
 
 
