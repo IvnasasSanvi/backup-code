@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 
 const Button = ({count, setname }) => {
-  
+  const [title, setTitle] = useState("My name is sanvi")
     return (
         <div>
        
@@ -14,7 +14,7 @@ const Button = ({count, setname }) => {
         </div>
     )
 }
-const [title, setTitle] = useState("My name is sanvi")
+
 function Header({title}){
     console.log("rendered")
     return <div>
