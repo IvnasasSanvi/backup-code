@@ -1,5 +1,5 @@
 import { use, useState } from 'react'
-import Button from '../component/Button'
+//import Button from '../component/Button'
 // default normal
 
 // const App = () => {
