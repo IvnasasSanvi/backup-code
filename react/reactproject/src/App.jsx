@@ -112,15 +112,36 @@ function App(){
     description: "study well"
   }])
 
+  function addTodo(){
+    setTodos([...todos,{
+      id: 4,
+      title: Math.random(),
+      description: Math.random()
+    }])
+    // const newTodos=[];
+    // for(let i=0; i<todos.length;i++){
+    //   newTodos.push(todos[i])
+    // }
+    //newTodos == todos
+    // newTodos.push({
+    //   id: 4,
+    //   title: Math.random(),
+    //   description: Math.random()
+    // })
+    // existing one +1
+    //setTodos(newTodos)
+  }
+
   return(
     <div> 
+      <button onClick={addTodo}>Add a Todo</button>
       {todos.map(todo=> <Todo title={todo.title} description={todo.description}/>)}
-      {todos.map(function(todo){
+      {/* {todos.map(function(todo){
         return <Todo title={todo.title} description={todo.description} />
       })}
       <Todo title={todos[0].title} description={todos[0].description} />
       <Todo title={todos[1].title} description={todos[1].description} />
-      <Todo title={todos[2].title} description={todos[2].description} />
+      <Todo title={todos[2].title} description={todos[2].description} /> */}
 
     </div>
   )
