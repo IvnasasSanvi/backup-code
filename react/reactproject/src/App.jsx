@@ -96,28 +96,28 @@ import { useState } from 'react'
 //     {title}
 //   </div>
 // }
-let counter = 4;
-function App(){
-  const [todos, setTodos] = useState([{
-    id: 1,
-    title: "go to gym",
-    description: "go to gym today"
-  },{
-    id: 2,
-    title: "eat healthy",
-    description: "eat healthy food"
-  },{
-    id: 3,
-    title: "study well",
-    description: "study well"
-  }])
+// let counter = 4;
+// function App(){
+//   const [todos, setTodos] = useState([{
+//     id: 1,
+//     title: "go to gym",
+//     description: "go to gym today"
+//   },{
+//     id: 2,
+//     title: "eat healthy",
+//     description: "eat healthy food"
+//   },{
+//     id: 3,
+//     title: "study well",
+//     description: "study well"
+//   }])
 
-  function addTodo(){
-    setTodos([...todos,{
-      id: counter++,
-      title: Math.random(),
-      description: Math.random()
-    }])
+//   function addTodo(){
+//     setTodos([...todos,{
+//       id: counter++,
+//       title: Math.random(),
+//       description: Math.random()
+//     }])
     // const newTodos=[];
     // for(let i=0; i<todos.length;i++){
     //   newTodos.push(todos[i])
@@ -130,28 +130,49 @@ function App(){
     // })
     // existing one +1
     //setTodos(newTodos)
-  }
+//  }
 
-  return(
-    <div> 
-      <button onClick={addTodo}>Add a Todo</button>
-      {todos.map(todo=> <Todo title={todo.title} description={todo.description}/>)}
-      {/* {todos.map(function(todo){
-        return <Todo title={todo.title} description={todo.description} />
-      })}
-      <Todo title={todos[0].title} description={todos[0].description} />
-      <Todo title={todos[1].title} description={todos[1].description} />
-      <Todo title={todos[2].title} description={todos[2].description} /> */}
+//   return(
+//     <div> 
+//       <button onClick={addTodo}>Add a Todo</button>
+//       {todos.map(todo=> <Todo title={todo.title} description={todo.description}/>)}
+//       {/* {todos.map(function(todo){
+//         return <Todo title={todo.title} description={todo.description} />
+//       })}
+//       <Todo title={todos[0].title} description={todos[0].description} />
+//       <Todo title={todos[1].title} description={todos[1].description} />
+//       <Todo title={todos[2].title} description={todos[2].description} /> */}
 
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-function Todo({title, description}){
-  return <div>
-    <h1>{title}</h1>
-    <h2>{description}</h2>
+// function Todo({title, description}){
+//   return <div>
+//     <h1>{title}</h1>
+//     <h2>{description}</h2>
+//   </div>
+// }
+
+// real wrapper
+function App(){
+  return 
+  <div>
+    <CardWrapper>
+      <div>
+        hi there
+      </div>
+    </CardWrapper>
   </div>
 }
+
+function CardWrapper({children}){
+  // create a div which has a border (hint: the way to create a border is border:"2px solid black")
+  //and inside the div , renders the prop
+  return <div style={{border: "2px solid black", padding: 20}}>
+    {children}
+  </div>
+}
+
 
 export default App
