@@ -98,7 +98,7 @@ import { useState } from 'react'
 // }
 
 function App(){
-  const [title, setTitle] = useState([{
+  const [todos, setTodos] = useState([{
     id: 1,
     title: "go to gym",
     description: "go to gym today"
@@ -114,6 +114,13 @@ function App(){
 
   return(
     <div> 
+      {todos.map(todo=> <Todo title={todo.title} description={todo.description}/>)}
+      {todos.map(function(todo){
+        return <Todo title={todo.title} description={todo.description} />
+      })}
+      <Todo title={todos[0].title} description={todos[0].description} />
+      <Todo title={todos[1].title} description={todos[1].description} />
+      <Todo title={todos[2].title} description={todos[2].description} />
 
     </div>
   )
