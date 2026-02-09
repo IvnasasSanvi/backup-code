@@ -1,4 +1,4 @@
-import { use, useState } from 'react'
+import { useState } from 'react'
 //import Button from '../component/Button'
 // default normal
 
@@ -69,33 +69,61 @@ import { use, useState } from 'react'
 // }
 
 
-function App() {
-  return (
-    <div>
-      <HeaderWithButton />
-      <Header title="My name is raman" />
+// function App() {
+//   return (
+//     <div>
+//       <HeaderWithButton />
+//       <Header title="My name is raman" />
+//     </div>
+//   )
+// }
+
+// function HeaderWithButton() {
+//   const [firstTitle, setFirstTitle] = useState("my name is harkirat");
+
+//   function changeTitle() {
+//     setFirstTitle("My name is " + Math.random())
+//   }
+
+//   return <>
+//     <button onClick={changeTitle}>Click me to change the title</button>
+//     <Header title={firstTitle} />
+//   </>
+// }
+
+// function Header({title}) {
+//   return <div>
+//     {title}
+//   </div>
+// }
+
+function App(){
+  const [title, setTitle] = useState([{
+    id: 1,
+    title: "go to gym",
+    description: "go to gym today"
+  },{
+    id: 2,
+    title: "eat healthy",
+    description: "eat healthy food"
+  },{
+    id: 3,
+    title: "study well",
+    description: "study well"
+  }])
+
+  return(
+    <div> 
+
     </div>
   )
 }
 
-function HeaderWithButton() {
-  const [firstTitle, setFirstTitle] = useState("my name is harkirat");
-
-  function changeTitle() {
-    setFirstTitle("My name is " + Math.random())
-  }
-
-  return <>
-    <button onClick={changeTitle}>Click me to change the title</button>
-    <Header title={firstTitle} />
-  </>
-}
-
-function Header({title}) {
+function Todo({title, description}){
   return <div>
-    {title}
+    <h1>{title}</h1>
+    <h2>{description}</h2>
   </div>
 }
-
 
 export default App
