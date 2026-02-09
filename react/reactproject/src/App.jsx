@@ -96,7 +96,7 @@ import { useState } from 'react'
 //     {title}
 //   </div>
 // }
-
+let counter = 4;
 function App(){
   const [todos, setTodos] = useState([{
     id: 1,
@@ -114,7 +114,7 @@ function App(){
 
   function addTodo(){
     setTodos([...todos,{
-      id: 4,
+      id: counter++,
       title: Math.random(),
       description: Math.random()
     }])
