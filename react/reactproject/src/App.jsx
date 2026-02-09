@@ -1,4 +1,4 @@
-import { useState } from 'react'
+//import { useState } from 'react'
 //import Button from '../component/Button'
 // default normal
 
@@ -156,15 +156,20 @@ import { useState } from 'react'
 
 // real wrapper
 function App(){
-  return 
+  return(
   <div>
     <CardWrapper>
       <div>
         hi there
       </div>
     </CardWrapper>
+    <CardWrapper>
+      <div>
+        hello there
+      </div>
+    </CardWrapper>
   </div>
-}
+)}
 
 function CardWrapper({children}){
   // create a div which has a border (hint: the way to create a border is border:"2px solid black")
