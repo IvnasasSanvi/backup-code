@@ -155,29 +155,55 @@
 // }
 
 // real wrapper
-function App(){
-  return(
-  <div>
-    <CardWrapper>
-      <div>
-        hi there
-      </div>
-    </CardWrapper>
-    <CardWrapper>
-      <div>
-        hello there
-      </div>
-    </CardWrapper>
-  </div>
-)}
+// function App(){
+//   return(
+//   <div>
+//     <CardWrapper>
+//       <div>
+//         hi there
+//       </div>
+//     </CardWrapper>
+//     <CardWrapper>
+//       <div>
+//         hello there
+//       </div>
+//     </CardWrapper>
+//   </div>
+// )}
 
-function CardWrapper({children}){
-  // create a div which has a border (hint: the way to create a border is border:"2px solid black")
-  //and inside the div , renders the prop
-  return <div style={{border: "2px solid black", padding: 20}}>
-    {children}
+// function CardWrapper({children}){
+//   // create a div which has a border (hint: the way to create a border is border:"2px solid black")
+//   //and inside the div , renders the prop
+//   return <div style={{border: "2px solid black", padding: 20}}>
+//     {children}
+//   </div>
+// }
+
+
+import { memo, useState } from "react";
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  function onClick() {
+    console.log("child clicked")
+  }
+
+  return <div>
+    <Child onClick={onClick} />
+    <button onClick={() => {
+      setCount(count + 1);
+    }}>Click me {count}</button>
   </div>
 }
+
+const Child = memo(({onClick}) => {
+  console.log("child render")
+
+  return <div>
+    <button onClick={onClick}>Button clicked</button>
+  </div>
+})
 
 
 export default App
