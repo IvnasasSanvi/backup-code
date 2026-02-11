@@ -1,3 +1,5 @@
+import React from 'react'
+import NavBar from '../component/NavBar'
 //import { useState } from 'react'
 //import Button from '../component/Button'
 // default normal
@@ -180,30 +182,37 @@
 // }
 
 
-import { memo, useState } from "react";
+// import { memo, useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+// function App() {
+//   const [count, setCount] = useState(0)
 
-  function onClick() {
-    console.log("child clicked")
-  }
+//   function onClick() {
+//     console.log("child clicked")
+//   }
 
-  return <div>
-    <Child onClick={onClick} />
-    <button onClick={() => {
-      setCount(count + 1);
-    }}>Click me {count}</button>
-  </div>
+//   return <div>
+//     <Child onClick={onClick} />
+//     <button onClick={() => {
+//       setCount(count + 1);
+//     }}>Click me {count}</button>
+//   </div>
+// }
+
+// const Child = memo(({onClick}) => {
+//   console.log("child render")
+
+//   return <div>
+//     <button onClick={onClick}>Button clicked</button>
+//   </div>
+// })
+
+const App = () => { 
+  return (
+    <div>
+      <NavBar ></NavBar>
+    </div>
+  )
 }
-
-const Child = memo(({onClick}) => {
-  console.log("child render")
-
-  return <div>
-    <button onClick={onClick}>Button clicked</button>
-  </div>
-})
-
 
 export default App
