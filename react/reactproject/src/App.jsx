@@ -266,14 +266,14 @@ function Todo({id}) {
       })
   }, [])
 
-  // return <div>
-  //   <h1>
-  //     {todo.title}
-  //   </h1>
-  //   <h4>
-  //     {todo.description}
-  //   </h4>
-  // </div>
+  return <div>
+    <h1>
+      {todo.title}
+    </h1>
+    <h4>
+      {todo.description}
+    </h4>
+  </div>
 }
 
 export default App
